@@ -1,6 +1,4 @@
 <?php
-$success = true;
-$message = "ISCRIVITI ALLA NEWSLETTER";
 
 if (isset($_GET["email"])) {
     $email = $_GET["email"];
@@ -27,11 +25,11 @@ if (isset($_GET["email"])) {
 </head>
 
 <body>
-
+    <?php if(isset($message)){ ?>
     <div class="alert alert-danger" role="alert">
         <?php echo $message; ?>
     </div>
-
+    <?php } ?>
 </body>
 
 </html>
